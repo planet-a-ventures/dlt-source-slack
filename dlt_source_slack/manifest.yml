@@ -1,0 +1,15 @@
+display_information:
+  name: DLT Slack Exporter
+features:
+  bot_user:
+    display_name: DLT Slack Exporter
+    always_online: false
+oauth_config:
+  scopes:
+    bot:
+      - users:read
+      - users.profile:read
+settings:
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

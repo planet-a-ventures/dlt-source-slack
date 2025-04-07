@@ -1,0 +1,46 @@
+[project]
+name = "dlt-source-slack"
+dynamic = ["version"]
+description = "DLT (dlthub.com) source for Slack (slack.com)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dlt>=1.9.0",
+    "slack-sdk>=3.35.0",
+]
+authors = [{ name = "Planet A Ventures" }]
+maintainers = [
+    { name = "Joscha Feth", email = "joscha@planet-a.com" },
+]
+keywords = ["slack", "dlt", "dlthub"]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.optional-dependencies]
+show = [
+    "dlt[duckdb]>=1.9.0",
+    "streamlit>=1.41.1",
+    "watchdog>=6.0.0",
+]
+
+[tool.uv]
+resolution = "lowest-direct"
+
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "semver"
+bump = true
