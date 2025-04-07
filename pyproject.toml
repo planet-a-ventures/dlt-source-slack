@@ -44,3 +44,11 @@ source = "uv-dynamic-versioning"
 vcs = "git"
 style = "semver"
 bump = true
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
+
+[tool.setuptools.packages.find]
+exclude = ["tests"]
