@@ -18,7 +18,7 @@ def load_slack_data() -> None:
         # we need this in case new resources, etc. are added
         schema_contract={"columns": "evolve"},
     )
-    print(info)
+    print(info)  # noqa: T201
 
 
 if __name__ == "__main__":
