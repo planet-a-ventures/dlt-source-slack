@@ -64,7 +64,6 @@ async def user_details(users: List[Any]):
             create_table_variant=True,
         )
         profile = {**user["profile"], "id": user["id"]}
-        print(profile)
         yield dlt.mark.with_hints(
             item=use_id(profile),
             hints=dlt.mark.make_hints(
