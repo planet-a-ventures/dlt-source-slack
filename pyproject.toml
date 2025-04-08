@@ -52,3 +52,6 @@ dev = [
 
 [tool.setuptools.packages.find]
 exclude = ["tests"]
+
+[tool.ruff.lint]
+extend-select = ["T20"]
